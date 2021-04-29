@@ -1,0 +1,25 @@
+qtd_idiomas = int(input())
+
+vetorIdiomas = []
+vetorSaudacao = []
+
+for i in range(qtd_idiomas):
+  idioma = input()
+  vetorIdiomas.append(idioma)
+  mensagem = input()
+  vetorSaudacao.append(mensagem)
+
+
+qtd_criancas = int(input())
+
+for i in range(qtd_criancas):
+  nome = input()
+  idiomaNativo = input()
+
+  #imprimindo a mensagem personalizada
+  print(nome)
+  for i in range(qtd_idiomas):
+    if (idiomaNativo == vetorIdiomas[i]):
+      indice = i
+
+  print(vetorSaudacao[indice]+"\n")

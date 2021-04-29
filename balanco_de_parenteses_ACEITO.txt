@@ -1,0 +1,23 @@
+expressao = input()
+
+while(expressao != 0):
+  cont_abre = 0
+  condicao_de_Erro = 0
+  for letra in expressao:  
+    if(letra == '('):
+      cont_abre = cont_abre + 1
+    if(letra == ')'):
+      cont_abre = cont_abre - 1
+      if(cont_abre < 0):
+        condicao_de_Erro = 1
+        break
+
+  if(cont_abre == 0 and condicao_de_Erro == 0):
+    print('correct')
+  else:
+    print('incorrect')
+
+  try:
+    expressao = input()
+  except EOFError:
+        break

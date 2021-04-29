@@ -1,0 +1,16 @@
+qtd_testes = int(input())
+
+for i in range(qtd_testes):
+  expressao = input()
+  cont_abre = 0
+  qtd_diamantes = 0
+
+  for caractere in expressao:
+    if(caractere == '<'):
+      cont_abre = cont_abre + 1
+    if(caractere == '>'):
+      if(cont_abre > 0):
+        cont_abre = cont_abre - 1
+        qtd_diamantes = qtd_diamantes + 1
+
+  print(qtd_diamantes)
